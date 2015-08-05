@@ -135,7 +135,7 @@ body {
 				text-decoration: none;
 				color: $link-color;
 				border-bottom: 2px rgba(0, 0, 0, 0) solid;			
-				transition: .2s ease-in-out;
+				transition: .2s cubic-bezier(0.15, 0.62, 0.74, 1.04);
 				padding-bottom: 10px;
 
 				&:hover {
@@ -145,8 +145,9 @@ body {
 				}
 			}
 
-			.right {
+			.right-link {
 				//TODO: Make this thing aligned to the right
+				margin-left: 350px;
 			}		
 		}
 
