@@ -1,0 +1,22 @@
+@media screen and (max-width: 1024px)  {
+	#canvas {
+		display: none;
+	}
+
+	.land {
+		height: auto;
+	}
+
+	.right {
+		text-align: right;
+	}
+
+	.right-link {
+		margin-left: 0px !important;
+		right: 100;
+	}		
+
+	img {
+		visibility: hidden;
+	}
+}
