@@ -1,0 +1,51 @@
+//Imports
+@import "compass/reset";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,500,700);
+
+//Vars
+
+	//Font stuff
+	$lg: 700;
+	$md: 500;
+	$sm: 300;
+
+	$p-text: 1.2em;	
+	
+	//Colors
+	$currently: #0270EF;
+	$previously: #C146E3;
+	$work: #E34C44;
+
+	$primary: rgba(0, 0, 0, 1);
+	$link-color: $work;
+
+	$sans-fallback: Helvetica, Arial, sans-serif;
+
+
+
+//Mixins
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+//Other stuff
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 100;
+}

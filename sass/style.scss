@@ -1,0 +1,200 @@
+@import "vars.scss";
+@import "animate.scss";
+
+body {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	font-size: 120%;
+	font-family: 'Roboto', $sans-fallback;
+}
+
+.land {
+	width: 100%;
+	height: 78vh;
+
+	.container {
+		width: 80%;
+		max-width: 1024px;
+		display: block;
+		margin: 0 auto;
+		margin-top: 15%;
+		margin-bottom: 0;
+
+		h1 {
+			color: $primary;
+			font-size: 3rem;
+			font-weight: $lg;
+			margin-bottom: 23px;
+		}
+
+		h2 {
+			font-size: 1.45rem;
+			font-weight: $sm;
+			color: lighten($primary, 75%);
+			margin-bottom: 30px;
+		}
+
+		p {
+			max-width: 700px;
+			font-size: $p-text;
+			font-weight: $sm;
+			line-height: 2.5rem;
+			margin-bottom: 15px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $primary;
+			font-weight: $sm;
+			display: inline;
+			margin: 15px auto;
+			transition: .2s ease-in-out;
+			font-size: 1.45rem;
+
+			&:first-of-type {
+				margin-top: 40px;
+			}
+
+			&:hover {
+				color: lighten($primary, 10%);
+			}
+		}
+
+		.currently {
+			color: $currently;
+		}
+
+		.previously {
+			color: $previously;
+		}
+
+		.prev {
+			color: lighten($primary, 75%);
+			max-width: 530px;
+		}
+
+		.work {
+			color: $work;
+		}
+	}
+}
+
+
+.project {
+	$project-title-size: 3rem;
+	$project-title-color: #000;
+
+	$description-size: 1.3rem;
+	$description-color: rgba(0, 0, 0, .7);
+
+	height: 70vh;
+	width: 100%;
+	background-color: #f8faf7;
+	overflow: hidden;
+
+	.container {
+		@include vertical-align;
+		max-width: 1024px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	&:nth-child(2n+1) {
+		background-color: white;
+	}
+
+	.description {
+		max-width: 400px;
+		width: 60%;
+		display: block;
+
+		h1 {
+			font-size: $project-title-size;
+			color: $project-title-color;
+			font-weight: $lg;
+			margin-bottom: 20px;
+		}
+
+		h2 {
+			font-size: $description-size;
+			color: $description-color; 
+			line-height: 2.4rem;
+			margin-bottom: 40px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $link-color;
+			border-bottom: 2px rgba(0, 0, 0, 0) solid;			
+			transition: .2s ease-in-out;
+			padding-bottom: 10px;
+
+			&:hover {
+				color: darken($link-color, 30%);
+				border-bottom: 2px darken($link-color, 30%) solid;
+				padding-bottom: 3px;
+			}
+		}
+	}
+
+	.preview {
+		max-width: 500px;
+		width: 40%;
+		margin-left: auto;
+		display: block;
+
+		img {
+			max-width: 500px;
+			float: right;
+			transform: translateY(-370px);
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	
+	.land {
+		height: auto;
+		margin-bottom: 50px
+	}
+
+	.project {
+		height: 90vh;
+		.container {
+			width: 90%;
+		}
+
+		.description {
+			width: 100%;
+			display: block;
+			
+			h1 {
+				font-size: 2rem;
+			}
+
+			h2 {
+				font-size: 1.2rem;
+			}
+
+		}
+
+		.preview {
+			width: 100%;
+			display: block;
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.project {
+		.preview {
+			img {
+				transform: translateY(-315px);
+			}
+		}
+	}
+} 
