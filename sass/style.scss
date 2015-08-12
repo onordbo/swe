@@ -17,6 +17,10 @@ body {
 	overflow: hidden;
 }
 
+a:focus {
+	outline: 0;
+}
+
 .land {
 	width: 100%;
 	height: 78vh;
@@ -79,7 +83,7 @@ body {
 
 		.prev {
 			color: lighten($primary, 75%);
-			max-width: 530px;
+			max-width: 560px;
 		}
 
 		.work {
@@ -154,7 +158,6 @@ body {
 			}
 
 			.right-link {
-				//TODO: Make this thing aligned to the right
 				margin-left: 350px;
 			}		
 		}
